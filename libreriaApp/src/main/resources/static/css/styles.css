@@ -1,0 +1,10 @@
+.iconos a{
+  font-size: 2em;
+  transition: transform .3s ease-out;
+  display: inline-block;
+  text-decoration: none;
+  font-size: medium;
+}
+.iconos a:hover {
+  transform: translate(0, -10px);
+}

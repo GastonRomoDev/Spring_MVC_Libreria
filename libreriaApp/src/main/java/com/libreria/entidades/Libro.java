@@ -1,0 +1,121 @@
+
+package com.libreria.entidades;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+public class Libro {
+    @Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid",strategy ="uuid2")
+    private String id;
+    
+    private long isbn;
+    private String titulo;
+    private Integer anio;
+    private Integer ejemplares;
+    private Integer ejemPrestados;
+    private Integer ejemRestantes;
+    private boolean alta;
+    @OneToOne
+    private Autor autor;
+    @OneToOne
+    private Editorial editorial;
+    @OneToOne
+    private Foto foto;
+
+    public Foto getFoto() {
+        return foto;
+    }
+
+    public void setFoto(Foto foto) {
+        this.foto = foto;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public long getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(long isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public Integer getAnio() {
+        return anio;
+    }
+
+    public void setAnio(Integer anio) {
+        this.anio = anio;
+    }
+
+    public Integer getEjemplares() {
+        return ejemplares;
+    }
+
+    public void setEjemplares(Integer ejemplares) {
+        this.ejemplares = ejemplares;
+    }
+
+    public Integer getEjemPrestados() {
+        return ejemPrestados;
+    }
+
+    public void setEjemPrestados(Integer ejemPrestados) {
+        this.ejemPrestados = ejemPrestados;
+    }
+
+    public Integer getEjemRestantes() {
+        return ejemRestantes;
+    }
+
+    public void setEjemRestantes() {
+        this.ejemRestantes = ejemplares -ejemPrestados;
+    }
+
+    public boolean isAlta() {
+        return alta;
+    }
+
+    public void setAlta(boolean alta) {
+        this.alta = alta;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
+    public Editorial getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(Editorial editorial) {
+        this.editorial = editorial;
+    }
+    
+    
+    
+}
