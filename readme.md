@@ -34,7 +34,7 @@ Desde una terminal realizar lo siguiente:
     $ mvn clean install         #Maven hace un clean de cada modulo y luego la instalacion de cada uno.
     $ mvn spring-boot:run       #Deploy de la aplicacion
 
-Para acceder a la app una se hizo el deploy: http://localhost:8080/Spring_MVC_Libreria/
+Para acceder a la app una se hizo el deploy: http://localhost:8080/
 
 ### Requisitos previos:
 -------------------
