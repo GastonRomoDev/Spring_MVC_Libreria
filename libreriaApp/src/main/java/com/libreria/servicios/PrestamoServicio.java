@@ -91,7 +91,7 @@ public class PrestamoServicio {
         Calendar calendarPrest = Calendar.getInstance();
         Calendar calendarDev = Calendar.getInstance();
         calendarPrest.setTime(fechaPrestamo);
-        calendarPrest.setTime(fechaDevolucion);
+        calendarDev.setTime(fechaDevolucion);
         LocalDate fechaPres = LocalDate.of(calendarPrest.get(Calendar.YEAR), calendarPrest.get(Calendar.MONTH), calendarPrest.get(Calendar.DAY_OF_MONTH));
         LocalDate fechaDev = LocalDate.of(calendarDev.get(Calendar.YEAR), calendarDev.get(Calendar.MONTH), calendarDev.get(Calendar.DAY_OF_MONTH));
         
